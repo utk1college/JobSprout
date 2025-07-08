@@ -1,0 +1,65 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212; /* Dark background */
+    color: #ecf0f1; /* Light text color for readability */
+}
+
+/* Main Container */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content Section */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #1f1f1f; /* Slightly lighter than the body background */
+    border-radius: 8px;
+}
+
+/* Button Styles */
+button {
+    background-color: #1DB954; /* Spotify green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+button:hover {
+    background-color: #1ed760; /* Lighter green on hover */
+}
+
+/* Focus States */
+button:focus, a:focus {
+    outline: 2px solid #1DB954;  /* Add focus outline with your theme color */
+    outline-offset: 2px;
+}
+
+/* Hover for links */
+a:hover {
+    color: #1DB954; /* Green for links */
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+        max-width: 100%;
+    }
+}

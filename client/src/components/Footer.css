@@ -1,0 +1,81 @@
+/* Footer Styling */
+.footer {
+    background-color: rgba(18, 18, 18, 0.95); /* Slightly transparent black */
+    padding: 20px;
+    text-align: center;
+    color: #fff; 
+    position: static;  
+    width: 100%;  
+    font-size: 0.85em; 
+    z-index: 100; 
+    left: 0; 
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer a:hover {
+    color: #1DB954; 
+    transform: scale(1.1); 
+}
+
+/* Optional: Adding some spacing for icons or social links */
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+/* If you are adding social media icons */
+.footer .social-icons i {
+    margin: 0 20px;  /* More space between icons */
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+}
+
+.footer .social-icons i:hover {
+    color: #1DB954; /* Green on hover for icons */
+    transform: scale(1.1); /* Slight scaling effect */
+}
+
+/* Ensure the body takes up the full height */
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The content section takes all available space */
+.content {
+    flex-grow: 1;  /* Ensures content stretches */
+    padding-bottom: 50px; /* Optional: space to ensure footer doesn't overlap */
+}
+
+/* Footer remains at the bottom, but not fixed */
+footer {
+    margin-top: auto; /* Pushes footer to the bottom when content is insufficient */
+    padding: 20px;
+    background-color: rgba(18, 18, 18, 0.95); /* Slightly transparent black */
+    color: #fff;
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.75em; /* Slightly smaller font for mobile */
+        padding: 15px; /* Reduce padding for better fit */
+    }
+
+    .footer a {
+        font-size: 0.9em; /* Smaller links */
+    }
+
+    .footer .social-icons i {
+        font-size: 1.3em; /* Smaller icons for mobile */
+    }
+}

@@ -1,0 +1,217 @@
+/* Body background color */
+body {
+    background-color: #121212; /* Black background */
+    color: #fff;  /* Text color white */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for Login and Signup */
+.login-container, .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Black */
+    padding: 10px; /* Small padding to avoid elements touching the edges */
+}
+
+/* Card for content inside Login and Signup pages */
+.login-card, .signup-card {
+    background-color: #1a1a1a;  /* Slightly lighter than black panel */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for the card */
+    width: 100%;
+    max-width: 400px; /* Limit max width */
+    text-align: center;
+}
+
+/* Input fields for Login and Signup */
+.login-card input, .signup-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #2c2c2c;  /* Slightly darker background for inputs */
+    color: #fff; /* Input text color */
+}
+
+/* Focus effect on inputs */
+.login-card input:focus, .signup-card input:focus {
+    border-color: #1DB954; /* Highlight border with green when focused */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.5); /* Glow effect for focus */
+}
+
+/* Button for Login and Signup */
+.login-card button, .signup-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1DB954; /* Spotify green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-card button:hover, .signup-card button:hover {
+    background-color: #1ed760; /* Slightly different green on hover */
+    transform: scale(1.05); /* Small scale effect on hover */
+}
+
+/* Links */
+.login-link p, .signup-link p {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #ccc; /* Slightly lighter text for better contrast */
+}
+
+.login-link a, .signup-link a {
+    text-decoration: none;
+    color: #1DB954;  /* Spotify green */
+}
+
+.login-link a:hover, .signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+    color: #ff4444;
+    background-color: rgba(255, 68, 68, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Disabled button states */
+.login-card button:disabled, .signup-card button:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.login-card button:disabled:hover, .signup-card button:disabled:hover {
+    background-color: #666666;
+    transform: none;
+}
+
+/* Loading state for inputs */
+.login-card input:disabled, .signup-card input:disabled {
+    background-color: #1a1a1a;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Welcome message in header */
+.welcome-message {
+    color: #1DB954;
+    margin-right: 15px;
+    font-size: 0.9em;
+}
+
+/* Logout button specific styling */
+.nav-button.logout {
+    background-color: #ff4444;
+}
+
+.nav-button.logout:hover {
+    background-color: #ff6666;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+    .login-card, .signup-card {
+        padding: 20px;
+        max-width: 90%; /* Allow card to take more width on small screens */
+    }
+
+    .login-card input, .signup-card input {
+        font-size: 0.9em; /* Slightly smaller text size for better fit */
+    }
+
+    .login-card button, .signup-card button {
+        font-size: 1em; /* Adjust button font size for mobile */
+    }
+}
+
+/* Loading spinner (optional) */
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #1DB954;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form validation styles */
+.login-card input:invalid, .signup-card input:invalid {
+    border-color: #ff4444;
+}
+
+/* Success message styling */
+.success-message {
+    color: #1DB954;
+    background-color: rgba(29, 185, 84, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.login-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(29, 185, 84, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(29, 185, 84, 0.05) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(29, 185, 84, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+.login-card {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}

@@ -1,0 +1,103 @@
+.companies-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .companies-search {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .companies-search input,
+  .companies-search select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #2c2c2c;
+    color: white;
+  }
+  
+  .companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  @media (min-width: 1200px) {
+    .companies-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .companies-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .company-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .company-card:hover {
+    transform: translateY(-5px);
+    border-color: #1DB954;
+  }
+
+  .company-logo {
+    width: 80px;
+    height: 80px;
+    background: #1DB954;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    margin: 0 auto 1rem;
+  }
+
+  .company-card h3 {
+    color: #1DB954;
+    margin-bottom: 0.5rem;
+  }
+
+  .company-card .industry {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .company-card .location {
+    color: #888;
+    margin-bottom: 1rem;
+  }
+
+  .company-card .positions {
+    color: #1DB954;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .view-jobs-btn {
+    background: #1DB954;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .view-jobs-btn:hover {
+    background: #1ed760;
+    transform: translateY(-2px);
+  }

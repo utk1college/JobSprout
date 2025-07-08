@@ -1,0 +1,31 @@
+/* Button.css */
+button {
+    background-color: #1DB954; /* Spotify Green */
+    color: white;
+    padding: 12px 24px;  /* Added more padding for better visual balance */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Separate transitions */
+    font-size: 1em;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+}
+
+/* Hover state - slightly brighter green */
+button:hover {
+    background-color: #1ed760; /* Lighter Green on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Active state - pressed button effect */
+button:active {
+    background-color: #16b745; /* Even darker green */
+    transform: scale(1.03); /* Slightly reduce scale */
+}
+
+/* Focus state - to make buttons accessible via keyboard */
+button:focus {
+    outline: 2px solid #1DB954; /* Visible outline for focus */
+    outline-offset: 2px; /* Slight offset for better visibility */
+}

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dd6516eb.css",
+    "main.js": "/static/js/main.caf9fb9a.js",
+    "static/media/office-supplies.jpg": "/static/media/office-supplies.f2a4f2198c3c294f55c8.jpg",
+    "index.html": "/index.html",
+    "main.dd6516eb.css.map": "/static/css/main.dd6516eb.css.map",
+    "main.caf9fb9a.js.map": "/static/js/main.caf9fb9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd6516eb.css",
+    "static/js/main.caf9fb9a.js"
+  ]
+}
